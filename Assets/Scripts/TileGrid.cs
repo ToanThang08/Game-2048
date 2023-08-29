@@ -33,12 +33,9 @@ public class TileGrid : MonoBehaviour
 
     public TileCell GetCell(int x, int y)
     {
-        if (x >= 0 && x < width && y >= 0 && y < height)
-        {
+        if (x >= 0 && x < width && y >= 0 && y < height) {
             return rows[y].cells[x];
-        }
-        else
-        {
+        } else {
             return null;
         }
     }
@@ -61,14 +58,12 @@ public class TileGrid : MonoBehaviour
         {
             index++;
 
-            if (index >= cells.Length)
-            {
+            if (index >= cells.Length) {
                 index = 0;
             }
 
             // all cells are occupied
-            if (index == startingIndex)
-            {
+            if (index == startingIndex) {
                 return null;
             }
         }
